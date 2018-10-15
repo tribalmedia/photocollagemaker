@@ -1,0 +1,121 @@
+<?php header('Access-Control-Allow-Origin: *'); ?>
+<!DOCTYPE>
+<html>
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="coco-collage.js"></script>
+    <script type="text/javascript" src="html2canvas.js"></script>
+</head>
+<style type="text/css">
+    #a {
+        width: 49.4%;
+        height: 60%;
+        background-color: #FFA07A;
+        float: right;
+    }
+    #border1{
+        width: 1%;
+        height: 60%;
+        background-color: #F0F8FF;
+        float: right;
+    }
+    #b {
+        width: 49.6%;
+        height: 60%;
+        background-color: #B0E0E6;
+        float: right;
+    }
+    #border2{
+        width: 100%;
+        height: 1%;
+        background-color: #F0F8FF;
+        float: right;
+    }
+    #c {
+        width: 24.2%;
+        height: 39%;
+        background-color: #B0E0E6;
+        float: right;
+    }
+    #border3{
+        width: 1%;
+        height: 39%;
+        background-color: #F0F8FF;
+        float: right;
+    }
+    #d {
+        width: 24.2%;
+        height: 39%;
+        background-color: #D8BFD8;
+        float: right;
+    }
+    #border4{
+        width: 1%;
+        height: 39%;
+        background-color: #F0F8FF;
+        float: right;
+    }
+    #e {
+        width: 24.2%;
+        height: 39%;
+        background-color: #FFA07A;
+        float: right;
+    }
+    #border5{
+        width: 1%;
+        height: 39%;
+        background-color: #F0F8FF;
+        float: right;
+    }
+    #f {
+        width: 24.4%;
+        height: 39%;
+        background-color: #FFB6C1;
+        float: right;
+    }
+</style>
+<body>
+<div id="img">
+    <p class="dimension" id="width"></p>
+    <div class="dimension rule_w"></div>
+    <div class="dimension rule_h"></div>
+    <p class="dimension" id="height"></p>
+    <div class ="x" id="a"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="border1"></div>
+    <div class ="x" id="b"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="border2"></div>
+    <div class ="x" id="c"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="border3"></div>
+    <div class ="x" id="d"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="border4"></div>
+    <div class ="x" id="e"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="border5"></div>
+    <div class ="x" id="f"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+</div>
+<input id="btn-Preview-Image" type="button" value="Preview"/>
+<div id="previewImage"></div>
+<script>
+    $( function() {
+        $( "#img" ).resizable({
+            containment: "body",
+            resize: function(e, ui) {
+                $(".dimension").css("display", "block");
+                $("#width").text(ui.size.width+"px");
+                $("#height").text(ui.size.height+"px");
+            }   
+        });
+        $(".x img").draggable({
+            stop: function(event, ui) {
+                if(($(this).position().top >= $(this).parent().height()) || ($(this).position().top <= -$(this).height()) || ($(this).position().left >= $(this).parent().width()) || ($(this).position().left <= -$(this).width()) ){
+                    $(this).css('top', 0);
+                    $(this).css('left', 0);
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

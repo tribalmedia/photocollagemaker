@@ -1,0 +1,72 @@
+<!DOCTYPE>
+<html>
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="html2canvas.js"></script>
+    <script type="text/javascript" src="coco-collage.js"></script>
+</head>
+<style type="text/css">
+    #a{
+        width: 49.5%;
+        height: 49.5%;
+        background-color: #DDA0DD;
+        float: left;
+    }
+    #border1{
+        width: 49.5%;
+        height: 1%;
+        background-color: white;
+        float: right;
+    }
+    #b {
+        width: 49.5%;
+        height: 100%;
+        background-color: #FFC0CB;
+        float: right;
+    }
+    #c{
+        width: 49.5%;
+        height: 49.5%;
+        background-color: #B0E0E6;
+        float: left;
+    }
+
+</style>
+<body>
+<div id="img">
+    <p class="dimension" id="width"></p>
+    <div class="dimension rule_w"></div>
+    <div class="dimension rule_h"></div>
+    <p class="dimension" id="height"></p>
+    <div class ="x" id="a"><input class="collage" type="file" id="img1" accept="image/jpeg, image/png"><img></div>
+    <div class ="x" id="b"><input class="collage" type="file" id="img2" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="border1"></div>
+    <div class ="x" id="c"><input class="collage" type="file" id="img3" accept="image/jpeg, image/png"><img></div>
+</div>
+<input id="btn-Preview-Image" type="button" value="Preview"/>
+<div id="previewImage"></div>
+<script>
+    $( function() {
+        $( "#img" ).resizable({
+            containment: "body",
+            resize: function(e, ui) {
+                $(".dimension").css("display", "block");
+                $("#width").text(ui.size.width+"px");
+                $("#height").text(ui.size.height+"px");
+            }   
+        });
+        $(".x img").draggable({
+            stop: function(event, ui) {
+                if(($(this).position().top >= $(this).parent().height()) || ($(this).position().top <= -$(this).height()) || ($(this).position().left >= $(this).parent().width()) || ($(this).position().left <= -$(this).width()) ){
+                    $(this).css('top', 0);
+                    $(this).css('left', 0);
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
