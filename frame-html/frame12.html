@@ -9,19 +9,19 @@
     <script type="text/javascript" src="html2canvas.js"></script>
 </head>
 <style type="text/css">
-    #a {
+    #frame12-a {
         width: 49.6%;
         height: 100%;
         background-color: #FFC0CB;
         float: left;
     }
-    #border1{
+    #frame12-border1{
         width: 1%;
         height: 100%;
         background-color: #F0F8FF;
         float: left;
     }
-    #b{
+    #frame12-b{
         width: 49.4%;
         height: 100%;
         background-color: #DDA0DD;
@@ -29,26 +29,26 @@
     }
 </style>
 <body>
-<div id="img">
+<div class="img">
     <p class="dimension" id="width"></p>
     <div class="dimension rule_w"></div>
     <div class="dimension rule_h"></div>
     <p class="dimension" id="height"></p>
-    <div class ="x" id="a"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border1"></div>
-    <div class ="x" id="b"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class ="x" id="frame12-a"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame12-border1"></div>
+    <div class ="x" id="frame12-b"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
 </div>
-<input id="btn-Preview-Image" type="button" value="Preview"/>
-<div id="previewImage"></div>
+<input class="btn-Preview-Image" type="button" value="Preview"/>
+<div class="previewImage"></div>
 <script>
     $( function() {
-        $( "#img" ).resizable({
+        $( ".img" ).resizable({
             containment: "body",
             resize: function(e, ui) {
                 $(".dimension").css("display", "block");
-                $("#width").text(ui.size.width+"px");
-                $("#height").text(ui.size.height+"px");
-            }   
+                $(this).find("#width").text(ui.size.width+"px");
+                $(this).find("#height").text(ui.size.height+"px");
+            }
         });
         $(".x img").draggable({
             stop: function(event, ui) {

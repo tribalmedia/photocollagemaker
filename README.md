@@ -16,7 +16,7 @@ $(document).ready(function(){
 ```
 ### Prerequisites
 
-This library is based on [Jquery](https://jquery.com/) and it's plugins ([Jquery-ui](https://jqueryui.com/), [Jquery-touch-punch](http://touchpunch.furf.com/). But all you need is a little knowledge of Jquery.
+This library is based on [Jquery](https://jquery.com/) and it's plugins ([Jquery-ui](https://jqueryui.com/), [Jquery-touch-punch](http://touchpunch.furf.com/)) and [html2canvas](https://html2canvas.hertzen.com/). But all you need is a little knowledge of Jquery.
 
 Then let's play!
 
@@ -33,6 +33,10 @@ Follow steps below:
 * Resize the frame.
 * Drag images in the frame.
 * Download collaged image.
+
+## Issue
+If the issue UnblockUI appear, just add ```$.unblockUI()``` function after ```collage($('#wrap'))```
+
 ## Running the tests
 
 Run the ```test.html``` file for more details.
@@ -43,11 +47,11 @@ Run the ```test.html``` file for more details.
 * [Jquery-1.8.3](https://jquery.com/)
 * [Jquery-ui-1.10.4](https://jqueryui.com/)
 * [Jquery-touch-punch](http://touchpunch.furf.com/)
-
+* [html2canvas](https://html2canvas.hertzen.com/)
 
 ## Authors
 
-Coco Square - [Tribal Media House](https://www.tribalmedia.co.jp/)
+&lt;code&gt; with ❤ by [Tribal Media House](https://www.tribalmedia.co.jp/)
 
 See also the list of [contributors](#) who participated in this project.
 
