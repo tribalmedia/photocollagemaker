@@ -26,7 +26,7 @@
     top: 47%;
 }
 
-#frame #img {
+#frame .img {
     margin-bottom: 30px;
 }
 
@@ -69,14 +69,14 @@
         font-weight: bold;
     }
 
-    #frame #img {
+    #frame .img {
         margin-bottom: 30px;
     }
 }
 
-#img {
-    width: 500px;
-    height: 500px;
+.img {
+    width: 300px;
+    height: 300px;
     border: 1px solid;
     margin-left: auto;
     margin-right: auto;
@@ -107,7 +107,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-    #img {
+    .img {
         width: 96%;
         height: 300px;
     }
