@@ -36,21 +36,17 @@
         $(this).next().css('display', 'block');
     });
 
-    var element = $("#img"); // global variable
-    var getCanvas; // global variable
 
-    $("#btn-Preview-Image").on('click', function () {
+    $(".btn-Preview-Image").on('click', function () {
+        var element = $(this).prev();
         $("#pic").remove();
         $("#downloadBtn").remove();
         html2canvas(element, {
             onrendered: function (canvas) {
-                canvas.id = "can";
-                $("#previewImage").append(canvas);
-                getCanvas = canvas;
                 var image = new Image();
                 image.id = "pic";
-                image.src = document.getElementById('can').toDataURL();
-                // $('body').append(image);
+                image.src = canvas.toDataURL();
+                $('body').append(image);
                 $('body').append("<a href='" + image.src +"' download='image.png' id='downloadBtn'> DownLoad Image </a>")
                 canvas.remove();
             }
