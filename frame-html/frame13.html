@@ -48,6 +48,23 @@
                 $(".dimension").css("display", "block");
                 $("#width").text(ui.size.width+"px");
                 $("#height").text(ui.size.height+"px");
+
+                $(this).find('.frame-upload').each(function () {
+                    var frameHeight = $(this).css('height').replace("px", "");
+                    var frameWidth = $(this).css('width').replace("px", "");
+                    var frameRela = frameHeight/frameWidth;
+                    var imageHeight = $(this).find('img').css('height').replace("px", "");
+                    var imageWidth = $(this).find('img').css('width').replace("px", "");
+                    var imageRela = imageHeight/imageWidth;
+
+                    if (imageRela < frameRela) {
+                        $(this).find('img').css('height', '100%');
+                        $(this).find('img').css('width', 'unset');
+                    } else {
+                        $(this).find('img').css('width', '100%');
+                        $(this).find('img').css('height', 'unset');
+                    }
+                })
             }   
         });
         $(".x img").draggable({

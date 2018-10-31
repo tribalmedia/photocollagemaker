@@ -8,8 +8,12 @@
             reader.onload = function(e) {
                 input.nextElementSibling.setAttribute("src", e.target.result);
                 input.nextElementSibling.onload = function() {
+                    var frameHeight = $(this).parents('.frame-upload').css('height').replace("px", "");
+                    var frameWidth = $(this).parents('.frame-upload').css('width').replace("px", "");
+                    var frameRela = frameHeight/frameWidth;
+                    var imageRela = this.height/this.width;
                     // access image size here
-                    if (this.height < this.width || this.height == this.width){
+                    if (imageRela < frameRela){
                         $(this).css('height', '100%');
                     } else {
                         $(this).css('width', '100%');
