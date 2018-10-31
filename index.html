@@ -11,12 +11,13 @@
 </head>
 <body>
 
-<button id="changeBtn">Change Layout</button>
+<button class="btn-ChangeLayout">Change Layout</button>
 <div id="myModal" class="modal">
 	<div class="modal-content">
         <span class="close">&times;</span>
         <h1>Select a Collage Template</h1>
         <div class="frame-image">
+            <a target="frame-default"><img src="frame-img/frame-default.png"></a>
             <a target="frame1"><img src="frame-img/frame1.png"></a>
             <a target="frame2"><img src="frame-img/frame2.png"></a>
             <a target="frame3"><img src="frame-img/frame3.png"></a>
@@ -38,59 +39,66 @@
 <div id="frame"></div>
 <script type="text/javascript">
 
-	var modal = document.getElementById('myModal');
-	var btn = document.getElementById("changeBtn");
-	var span = document.getElementsByClassName("close")[0];
-
-	btn.onclick = function() {
-	    modal.style.display = "block";
-	}
-
-	span.onclick = function() {
-	    modal.style.display = "none";
-	}
-
-	window.onclick = function(event) {
-	    if (event.target == modal) {
-	        modal.style.display = "none";
-	    }
-	}
+    var modal = document.getElementsByClassName('modal');
+    var span = document.getElementsByClassName("close");
+    var el = document.getElementsByClassName('btn-ChangeLayout');
+    for (i = 0; i < el.length ; i++) {
+        el[i].addEventListener('click', function() {
+            this.nextElementSibling.style.display = 'block';
+        });
+    }
+    for (i = 0; i < span.length ; i++) {
+        span[i].addEventListener('click', function() {
+            this.parentNode.parentNode.style.display = "none";
+        });
+    }
+    window.onclick = function(event) {
+        for(i = 0; i < modal.length; i++){
+            if (event.target == modal[i]) {
+                modal[i].style.display = "none";
+            }
+        }
+    }
 	$(document).ready(function(){
+        $("a[target='frame-default']").click(function(){
+            $("#frame").load("frame-html/frame-default.html");
+            $(this).parents('#myModal').css('display', 'none');
+        });
 		$("a[target='frame1']").click(function(){
-				$("#frame").load("frame-html/frame1.html");
-				 modal.style.display = "none";
+            $("#frame").load("frame-html/frame1.html");
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame2']").click(function(){
-				$("#frame").load("frame-html/frame2.html");
-				 modal.style.display = "none";
+            $("#frame").load("frame-html/frame2.html");
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame3']").click(function(){
 				$("#frame").load("frame-html/frame3.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame4']").click(function(){
 				$("#frame").load("frame-html/frame4.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame5']").click(function(){
 				$("#frame").load("frame-html/frame5.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame6']").click(function(){
 				$("#frame").load("frame-html/frame6.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame7']").click(function(){
 				$("#frame").load("frame-html/frame7.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame8']").click(function(){
 				$("#frame").load("frame-html/frame8.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame9']").click(function(){
 				$("#frame").load("frame-html/frame9.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame10']").click(function(){
 				$("#frame").load("frame-html/frame10.html");
@@ -98,23 +106,23 @@
 		});
 		$("a[target='frame11']").click(function(){
 				$("#frame").load("frame-html/frame11.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame12']").click(function(){
 				$("#frame").load("frame-html/frame12.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame13']").click(function(){
 				$("#frame").load("frame-html/frame13.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame14']").click(function(){
 				$("#frame").load("frame-html/frame14.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 		$("a[target='frame15']").click(function(){
 				$("#frame").load("frame-html/frame15.html");
-				 modal.style.display = "none";
+            $(this).parents('#myModal').css('display', 'none');
 		});
 	});
 </script>

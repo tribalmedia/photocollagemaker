@@ -9,43 +9,43 @@
     <script type="text/javascript" src="html2canvas.js"></script>
 </head>
 <style type="text/css">
-    #a {
+    #frame6-a {
         width: 100%;
         height: 50%;
         background-color: #FFC0CB;
         float: left;
     }
-    #border1{
+    #frame6-border1{
         width: 100%;
         height: 1%;
         background-color: #F0F8FF;
         float: left;
     }
-    #b{
+    #frame6-b{
         width: 32.8%;
         height: 49%;
         background-color: #DDA0DD;
         float: right;
     }
-    #border2{
+    #frame6-border2{
         width: 1%;
         height: 49%;
         background-color: #F0F8FF;
         float: right;
     }
-    #c{
+    #frame6-c{
         width: 32.6%;
         height: 49%;
         background-color: #B0E0E6;
         float: right;
     }
-    #border3{
+    #frame6-border3{
         width: 1%;
         height: 49%;
         background-color: #F0F8FF;
         float: right;
     }
-    #d{
+    #frame6-d{
         width: 32.6%;
         height: 49%;
         background-color: #FFA07A;
@@ -53,24 +53,24 @@
     }
 </style>
 <body>
-<div id="img">
+<div class="img">
     <p class="dimension" id="width"></p>
     <div class="dimension rule_w"></div>
     <div class="dimension rule_h"></div>
     <p class="dimension" id="height"></p>
-    <div class ="x" id="a"><input class="collage" type="file" id="img1" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border1"></div>
-    <div class ="x" id="b"><input class="collage" type="file" id="img2" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border2"></div>
-    <div class ="x" id="c"><input class="collage" type="file" id="img3" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border3"></div>
-    <div class ="x" id="d"><input class="collage" type="file" id="img4" accept="image/jpeg, image/png"><img></div>
+    <div class ="x" id="frame6-a"><input class="collage" type="file" id="img1" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame6-border1"></div>
+    <div class ="x" id="frame6-b"><input class="collage" type="file" id="img2" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame6-border2"></div>
+    <div class ="x" id="frame6-c"><input class="collage" type="file" id="img3" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame6-border3"></div>
+    <div class ="x" id="frame6-d"><input class="collage" type="file" id="img4" accept="image/jpeg, image/png"><img></div>
 </div>
-<input id="btn-Preview-Image" type="button" value="Preview"/>
-<div id="previewImage"></div>
+<input class="btn-Preview-Image" type="button" value="Preview"/>
+<div class="previewImage"></div>
 <script>
     $( function() {
-        $( "#img" ).resizable({
+        $( ".img" ).resizable({
             containment: "body",
             resize: function(e, ui) {
                 $(".dimension").css("display", "block");
@@ -93,7 +93,7 @@
                         $(this).find('img').css('height', 'unset');
                     }
                 })
-            }   
+            }
         });
         $(".x img").draggable({
             stop: function(event, ui) {

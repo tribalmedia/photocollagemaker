@@ -9,67 +9,67 @@
     <script type="text/javascript" src="html2canvas.js"></script>
 </head>
 <style type="text/css">
-    #a {
+    #frame7-a {
         width: 32.8%;
         height: 32.8%;
         background-color: #FFC0CB;
         float: left;
     }
-    #border1{
+    #frame7-border1{
         width: 1%;
         height: 32.8%;
         background-color: #F0F8FF;
         float: left;
     }
-    #b {
+    #frame7-b {
         width: 32.6%;
         height: 32.8%;
         background-color: #DDA0DD;
         float: left;
     }
-    #border2{
+    #frame7-border2{
         width: 1%;
         height: 32.8%;
         background-color: #F0F8FF;
         float: left;
     }
-    #c {
+    #frame7-c {
         width: 32.6%;
         height: 32.8%;
         background-color: #B0E0E6;
         float: right;
     }
-    #border3{
+    #frame7-border3{
         width: 100%;
         height: 1%;
         background-color: #F0F8FF;
         float: left;
     }
-    #d {
+    #frame7-d {
         width: 66.2%;
         height: 66.2%;
         background-color: #FFC0CB;
         float: right;
     }
-    #border4{
+    #frame7-border4{
         width: 1%;
         height: 66.2%;
         background-color: #F0F8FF;
         float: right;
     }
-    #e {
+    #frame7-e {
         width: 32.8%;
         height: 32.6%;
         background-color: #B0E0E6;
         float: right;
     }
-    #border5{
+    #frame7-border5{
         width: 32.8%;
         height: 1%;
         background-color: #F0F8FF;
         float: left;
     }
-    #f {
+    #frame7-f {
         width: 32.8%;
         height: 32.6%;
         background-color: #FFA07A;
@@ -77,28 +77,28 @@
     }
 </style>
 <body>
-<div id="img">
+<div class="img">
     <p class="dimension" id="width"></p>
     <div class="dimension rule_w"></div>
     <div class="dimension rule_h"></div>
     <p class="dimension" id="height"></p>
-    <div class ="x" id="a"><input class="collage" type="file" id="img1" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border1"></div>
-    <div class ="x" id="b"><input class="collage" type="file" id="img2" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border2"></div>
-    <div class ="x" id="c"><input class="collage" type="file" id="img3" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border3"></div>
-    <div class ="x" id="d"><input class="collage" type="file" id="img4" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border4"></div>
-    <div class ="x" id="e"><input class="collage" type="file" id="img5" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="border5"></div>
-    <div class ="x" id="f"><input class="collage" type="file" id="img6" accept="image/jpeg, image/png"><img></div>
+    <div class ="x" id="frame7-a"><input class="collage" type="file" id="img1" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame7-border1"></div>
+    <div class ="x" id="frame7-b"><input class="collage" type="file" id="img2" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame7-border2"></div>
+    <div class ="x" id="frame7-c"><input class="collage" type="file" id="img3" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame7-border3"></div>
+    <div class ="x" id="frame7-d"><input class="collage" type="file" id="img4" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame7-border4"></div>
+    <div class ="x" id="frame7-e"><input class="collage" type="file" id="img5" accept="image/jpeg, image/png"><img></div>
+    <div class="border" id="frame7-border5"></div>
+    <div class ="x" id="frame7-f"><input class="collage" type="file" id="img6" accept="image/jpeg, image/png"><img></div>
 </div>
-<input id="btn-Preview-Image" type="button" value="Preview"/>
-<div id="previewImage"></div>
+<input class="btn-Preview-Image" type="button" value="Preview"/>
+<div class="previewImage"></div>
 <script>
     $( function() {
-        $( "#img" ).resizable({
+        $( ".img" ).resizable({
             containment: "body",
             resize: function(e, ui) {
                 $(".dimension").css("display", "block");
@@ -121,7 +121,7 @@
                         $(this).find('img').css('height', 'unset');
                     }
                 })
-            }   
+            }
         });
         $(".x img").draggable({
             stop: function(event, ui) {
