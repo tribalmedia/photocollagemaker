@@ -1,11 +1,12 @@
 <!DOCTYPE>
 <html>
 <head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="https://cqv3.dev.jp/jquery.ui.touch-punch.js"></script>
-    <script type="text/javascript" src="https://cqv3.dev.jp/html2canvas.js"></script>
-    <script type="text/javascript" src="https://cqv3.dev.jp/coco-collage.js"></script>
+    <script type="text/javascript" src="jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="coco-collage.js"></script>
+    <script type="text/javascript" src="html2canvas.js"></script>
 </head>
 <style type="text/css">
     #frame-default {
@@ -33,7 +34,7 @@
                 $(this).find("#width").text(ui.size.width+"px");
                 $(this).find("#height").text(ui.size.height+"px");
 
-                $(this).find('.frame-upload').each(function () {
+                $(this).find('.x').each(function () {
                     var frameHeight = $(this).css('height').replace("px", "");
                     var frameWidth = $(this).css('width').replace("px", "");
                     var frameRela = frameHeight/frameWidth;
