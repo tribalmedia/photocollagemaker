@@ -4,9 +4,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="jquery.ui.touch-punch.js"></script>
-    <script type="text/javascript" src="coco-collage.js"></script>
-    <script type="text/javascript" src="html2canvas.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script type="text/javascript" src="js/photoCollageMaker.js"></script>
 </head>
 <style type="text/css">
     #frame13-a {
@@ -46,8 +46,8 @@
             containment: "body",
             resize: function(e, ui) {
                 $(".dimension").css("display", "block");
-                $("#width").text(ui.size.width+"px");
-                $("#height").text(ui.size.height+"px");
+                $(this).find("#width").text(Math.round(ui.size.width)+"px");
+                $(this).find("#height").text(Math.round(ui.size.height)+"px");
 
                 $(this).find('.x').each(function () {
                     var frameHeight = $(this).css('height').replace("px", "");

@@ -4,15 +4,14 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="html2canvas.js"></script>
-	<script type="text/javascript" src="coco-collage.js"></script>
-    <link rel="stylesheet" type="text/css" href="modal.css">
-    <link rel="stylesheet" type="text/css" href="frame.css">
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+	<script type="text/javascript" src="js/photoCollageMaker.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/photoCollageMaker.css">
 </head>
 <body>
 
 <button class="btn-ChangeLayout">Change Layout</button>
-<div id="myModal" class="modal">
+<div id="collageTemplate-modal" class="modal">
 	<div class="modal-content">
         <span class="close">&times;</span>
         <h1>Select a Collage Template</h1>
@@ -62,43 +61,43 @@
 	$(document).ready(function(){
         $("a[target='frame-default']").click(function(){
             $("#frame").load("frame-html/frame-default.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
         });
 		$("a[target='frame1']").click(function(){
             $("#frame").load("frame-html/frame1.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame2']").click(function(){
             $("#frame").load("frame-html/frame2.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame3']").click(function(){
 				$("#frame").load("frame-html/frame3.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame4']").click(function(){
 				$("#frame").load("frame-html/frame4.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame5']").click(function(){
 				$("#frame").load("frame-html/frame5.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame6']").click(function(){
 				$("#frame").load("frame-html/frame6.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame7']").click(function(){
 				$("#frame").load("frame-html/frame7.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame8']").click(function(){
 				$("#frame").load("frame-html/frame8.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame9']").click(function(){
 				$("#frame").load("frame-html/frame9.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame10']").click(function(){
 				$("#frame").load("frame-html/frame10.html");
@@ -106,23 +105,23 @@
 		});
 		$("a[target='frame11']").click(function(){
 				$("#frame").load("frame-html/frame11.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame12']").click(function(){
 				$("#frame").load("frame-html/frame12.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame13']").click(function(){
 				$("#frame").load("frame-html/frame13.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame14']").click(function(){
 				$("#frame").load("frame-html/frame14.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 		$("a[target='frame15']").click(function(){
 				$("#frame").load("frame-html/frame15.html");
-            $(this).parents('#myModal').css('display', 'none');
+            $(this).parents('#collageTemplate-modal').css('display', 'none');
 		});
 	});
 </script>

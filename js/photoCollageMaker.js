@@ -12,7 +12,6 @@
                     var frameWidth = $(this).parents('.x').css('width').replace("px", "");
                     var frameRela = frameHeight/frameWidth;
                     var imageRela = this.height/this.width;
-                    // access image size here
                     if (imageRela < frameRela){
                         $(this).css('height', '100%');
                     } else {
@@ -42,7 +41,7 @@
 
 
     $(".btn-Preview-Image").on('click', function () {
-        var element = $(this).prev();
+        var element = $(".img");
         $("#pic").remove();
         $("#downloadBtn").remove();
         html2canvas(element, {
