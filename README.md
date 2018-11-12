@@ -34,9 +34,6 @@ Follow steps below:
 * Drag images in the frame.
 * Download collaged image.
 
-## Issue
-If the issue UnblockUI appear, just add ```$.unblockUI()``` function after ```collage($('#wrap'))```
-
 ## Running the tests
 
 Run the ```test.html``` file for more details.
