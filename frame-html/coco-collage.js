@@ -9,7 +9,6 @@ function readURL(input) {
         reader.onload = function(e) {
             input.nextElementSibling.setAttribute("src", e.target.result);
             input.nextElementSibling.onload = function() {
-                // access image size here
                 if (this.height < this.width || this.height == this.width){
                     $(this).css('height', '100%');
                 } else {
@@ -21,7 +20,6 @@ function readURL(input) {
     }
 }
 $('.x').click(function(event) {
-    console.log("aaaaaa11111");
     if (!$(event.target).is('.collage')) {
         $(this).find(".collage").trigger('click');
     }
@@ -33,8 +31,8 @@ $(":file").change(function() {
     $(this).next().css('display', 'block');
 });
 
-var element = $("#img"); // global variable
-var getCanvas; // global variable
+var element = $("#img"); 
+var getCanvas;
 
 $("#btn-Preview-Image").on('click', function () {
     $("#pic").remove();
@@ -48,7 +46,6 @@ $("#btn-Preview-Image").on('click', function () {
             image.id = "pic";
             image.src = document.getElementById('can').toDataURL();
             $('body').append(image);
-            // $('body').append("<a href='" + image.src +"' download='image.png' id='downloadBtn'> DownLoad Image </a>")
             canvas.remove();
         }
     });

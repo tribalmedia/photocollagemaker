@@ -20,7 +20,7 @@
 #frame #height {
     font-size: 14px;
     transform: rotate(270deg);
-    left: -35px;
+    right: 100%
     font-weight: bold;
     position: absolute;
     top: 47%;
