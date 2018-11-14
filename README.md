@@ -25,7 +25,7 @@ Then let's play!
 Follow steps below:
 
   1. Download direct or clone library ```git clone https://github.com/tribalmedia/photocollagemaker.git```.
-  2. Include ```coco-collage.js``` in your project.
+  2. Include ```photoCollageMaker.js``` in your project.
   3. Include the code in the 'Gettiing Started' in any where you want.
   
 ## Features
@@ -34,7 +34,7 @@ Follow steps below:
 * Drag images in the frame.
 * Download collaged image.
 
-## Running the tests
+## Running for test
 
 Run the ```test.html``` file for more details.
 
@@ -42,9 +42,25 @@ Run the ```test.html``` file for more details.
 ## Built With
 
 * [Jquery-1.8.3](https://jquery.com/)
-* [Jquery-ui-1.10.4](https://jqueryui.com/)
+
+To install Jquery library run this commandline:
+```
+bower install jQuery#1.8.3 --save
+```
+* [Jquery-ui-1.12.1](https://jqueryui.com/)
+
+To install Jquery-ui library run this commandline:
+```
+bower install jquery-ui#1.12.1
+```
 * [Jquery-touch-punch](http://touchpunch.furf.com/)
-* [html2canvas](https://html2canvas.hertzen.com/)
+
+To install Jquery-touch-punch library run this commandline:
+```
+npm i jquery-ui-touch-punch --save
+```
+
+* html2canvas
 
 ## Authors
 
