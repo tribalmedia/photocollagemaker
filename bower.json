@@ -1,0 +1,14 @@
+{
+  "name": "photocollagemaker",
+  "description": "A library help you to collage your images and it extremely easy to use.",
+  "main": "index.js",
+  "authors": [
+    "tmhtechlab"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tribalmedia/photocollagemaker",
+  "dependencies": {
+    "jquery": "jQuery#1.8.3",
+    "jquery-ui": "1.12.1"
+  }
+}
