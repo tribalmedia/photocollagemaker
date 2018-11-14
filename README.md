@@ -43,24 +43,17 @@ Run the ```test.html``` file for more details.
 
 * [Jquery-1.8.3](https://jquery.com/)
 
-To install Jquery library run this commandline:
-```
-bower install jQuery#1.8.3 --save
-```
 * [Jquery-ui-1.12.1](https://jqueryui.com/)
 
-To install Jquery-ui library run this commandline:
-```
-bower install jquery-ui#1.12.1
-```
 * [Jquery-touch-punch](http://touchpunch.furf.com/)
 
-To install Jquery-touch-punch library run this commandline:
-```
-npm i jquery-ui-touch-punch --save
-```
-
 * html2canvas
+
+To install Jquery, Jquery-ui, Jquery-touch-punch libraries run below commandline:
+```
+npm install
+bower install
+```
 
 ## Authors
 
