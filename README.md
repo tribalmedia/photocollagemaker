@@ -16,7 +16,7 @@ $(document).ready(function(){
 ```
 ### Prerequisites
 
-This library is based on [Jquery](https://jquery.com/) and it's plugins ([Jquery-ui](https://jqueryui.com/), [Jquery-touch-punch](http://touchpunch.furf.com/)) and [html2canvas](https://html2canvas.hertzen.com/). But all you need is a little knowledge of Jquery.
+This library is based on [jQuery](https://jquery.com/) and it's plugins ([jQuery-ui](https://jqueryui.com/), [jQuery-touch-punch](http://touchpunch.furf.com/)) and [html2canvas](https://html2canvas.hertzen.com/). But all you need is a little knowledge of jQuery.
 
 Then let's play!
 
@@ -41,15 +41,15 @@ Run the ```test.html``` file for more details.
 
 ## Built With
 
-* [Jquery-1.8.3](https://jquery.com/)
+* [jQuery-1.8.3](https://jquery.com/)
 
-* [Jquery-ui-1.12.1](https://jqueryui.com/)
+* [jQuery-ui-1.12.1](https://jqueryui.com/)
 
-* [Jquery-touch-punch](http://touchpunch.furf.com/)
+* [jQuery-touch-punch](http://touchpunch.furf.com/)
 
 * html2canvas
 
-To install Jquery, Jquery-ui, Jquery-touch-punch libraries run below commandline:
+To install jQuery, jQuery-ui, jQuery-touch-punch libraries run below commandline:
 ```
 npm install
 bower install
