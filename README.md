@@ -1,6 +1,6 @@
 # Collage Photo Maker
 
-A library help you to collage your images and it extremely easy to use.
+Collage Photo Maker is a simple and easy-to-use library that allows you to create a wonderful collage from many images.
 
 ## Getting Started
 
@@ -26,8 +26,8 @@ Follow steps below:
 
   1. Download direct or clone library ```git clone https://github.com/tribalmedia/photocollagemaker.git```.
   2. Include ```photoCollageMaker.js``` in your project.
-  3. Include the code in the 'Gettiing Started' in any where you want.
-  
+  3. Include the code in the 'Getting Started' in anywhere you want.
+
 ## Features
 * Collage your images in a frame.
 * Resize the frame.
