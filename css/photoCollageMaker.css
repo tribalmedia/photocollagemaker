@@ -1,4 +1,4 @@
-.modal {
+.pcm-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -12,7 +12,7 @@
 }
 
 /* Modal Content/Box */
-.modal-content {
+.pcm-modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -21,7 +21,7 @@
 }
 
 /* The Close Button */
-.close {
+.pcm-close {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -29,8 +29,8 @@
     margin-top: -20px;
     margin-right: -10px;
 }
-.close:hover,
-.close:focus {
+.pcm-close:hover,
+.pcm-close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -38,18 +38,18 @@
 h1 {
     text-align: center;
 }
-.frame-image a img {
+.pcm-frame-image a img {
     width: 100px;
     height: 100px;
 }
 
-#frame {
+#pcm-frame {
     margin-top: 50px;
     margin-left: 10px;
     margin-bottom: 30px;
 }
 
-#frame #width {
+#pcm-frame #pcm-width {
     font-size: 14px;
     top: -40px;
     font-weight: bold;
@@ -57,7 +57,7 @@ h1 {
     left: 47%;
 }
 
-#frame #height {
+#pcm-frame #pcm-height {
     font-size: 14px;
     transform: rotate(270deg);
     right: 100%;
@@ -66,7 +66,7 @@ h1 {
     top: 47%;
 }
 
-#frame .img {
+#pcm-frame .pcm-img {
     margin-bottom: 30px;
 }
 
@@ -88,51 +88,51 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
-    .modal-content{
+    .pcm-modal-content{
         width: 90%;
     }
-    #frame {
+    #pcm-frame {
         margin-top: 50px;
         margin-left: 10px;
         margin-bottom: 30px;
     }
-    #frame #width {
+    #pcm-frame #pcm-width {
         font-size: 14px;
         top: -40px;
         font-weight: bold;
     }
 
-    #frame #height {
+    #pcm-frame #pcm-height {
         font-size: 14px;
         transform: rotate(270deg);
         left: -35px;
         font-weight: bold;
     }
 
-    #frame .img {
+    #pcm-frame .pcm-img {
         margin-bottom: 30px;
     }
 }
 
-.img {
+.pcm-img {
     width: 300px;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.x {
+.pcm-x {
     position: relative;
     overflow:hidden
 }
 
-.x img {
+.pcm-x img {
     display: none;
     position: absolute;
     top: 0;
 }
 
-.collage{
+.pcm-collage{
     width: 0;
     height: 0;
 }
@@ -141,12 +141,12 @@ h1 {
     display: none !important;
 }
 
-.dimension {
+.pcm-dimension {
     display: none;
 }
 
 @media only screen and (max-width: 500px) {
-    .img {
+    .pcm-img {
         width: 96%;
         height: 300px;
     }
