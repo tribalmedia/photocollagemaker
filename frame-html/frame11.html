@@ -65,33 +65,33 @@
     }
 </style>
 <body>
-<div class="img">
-    <p class="dimension" id="width"></p>
-    <div class="dimension rule_w"></div>
-    <div class="dimension rule_h"></div>
-    <p class="dimension" id="height"></p>
-    <div class ="x" id="frame11-a"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="frame11-border1"></div>
-    <div class ="x" id="frame11-b"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="frame11-border2"></div>
-    <div class ="x" id="frame11-c"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="frame11-border3"></div>
-    <div class ="x" id="frame11-d"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
-    <div class="border" id="frame11-border4"></div>
-    <div class ="x" id="frame11-e"><input class="collage" type="file" accept="image/jpeg, image/png"><img></div>
+<div class="pcm-img">
+    <p class="pcm-dimension" id="pcm-width"></p>
+    <div class="pcm-dimension rule_w"></div>
+    <div class="pcm-dimension rule_h"></div>
+    <p class="pcm-dimension" id="pcm-height"></p>
+    <div class ="pcm-x" id="frame11-a"><input class="pcm-collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="pcm-border" id="frame11-border1"></div>
+    <div class ="pcm-x" id="frame11-b"><input class="pcm-collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="pcm-border" id="frame11-border2"></div>
+    <div class ="pcm-x" id="frame11-c"><input class="pcm-collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="pcm-border" id="frame11-border3"></div>
+    <div class ="pcm-x" id="frame11-d"><input class="pcm-collage" type="file" accept="image/jpeg, image/png"><img></div>
+    <div class="pcm-border" id="frame11-border4"></div>
+    <div class ="pcm-x" id="frame11-e"><input class="pcm-collage" type="file" accept="image/jpeg, image/png"><img></div>
 </div>
-<input class="btn-Preview-Image" type="button" value="Preview"/>
-<div class="previewImage"></div>
+<input class="pcm-btn-Preview-Image" type="button" value="Preview"/>
+<div class="pcm-previewImage"></div>
 <script>
     $( function() {
-        $( ".img" ).resizable({
+        $( ".pcm-img" ).resizable({
             containment: "body",
             resize: function(e, ui) {
-                $(".dimension").css("display", "block");
-                $(this).find("#width").text(Math.round(ui.size.width)+"px");
-                $(this).find("#height").text(Math.round(ui.size.height)+"px");
+                $(".pcm-dimension").css("display", "block");
+                $(this).find("#pcm-width").text(Math.round(ui.size.width)+"px");
+                $(this).find("#pcm-height").text(Math.round(ui.size.height)+"px");
 
-                $(this).find('.x').each(function () {
+                $(this).find('.pcm-x').each(function () {
                     var frameHeight = $(this).css('height').replace("px", "");
                     var frameWidth = $(this).css('width').replace("px", "");
                     var frameRela = frameHeight/frameWidth;
@@ -109,7 +109,7 @@
                 })
             }
         });
-        $(".x img").draggable({
+        $(".pcm-x img").draggable({
             stop: function(event, ui) {
                 if(($(this).position().top >= $(this).parent().height()) || ($(this).position().top <= -$(this).height()) || ($(this).position().left >= $(this).parent().width()) || ($(this).position().left <= -$(this).width()) ){
                     $(this).css('top', 0);
